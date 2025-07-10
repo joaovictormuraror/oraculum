@@ -121,16 +121,27 @@ class HistoryScreen extends StatelessWidget {
               color: const Color(0xFFD2AD79),
               padding: const EdgeInsets.symmetric(vertical: 20),
               width: double.infinity,
-              child: const Center(
-                child: Text(
-                  'oraculu͂m',
-                  style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.5,
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_back, color: Colors.white),
+                      onPressed: () => Navigator.pop(context),
+                    ),
                   ),
-                ),
+                  const Center(
+                    child: Text(
+                      'oraculum',
+                      style: TextStyle(
+                        fontSize: 28,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             const Padding(
